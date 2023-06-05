@@ -1,0 +1,39 @@
+<div>
+
+    <table class="table-info table table-dark table-striped">
+        <h2 align="center">Tableau des Recettes </h2>
+        <tr>
+
+            <th>Recette journaliere</th>
+            <th>recette mensuelle</th>
+            <th>recette annuelle</th>
+        </tr>
+        <tr>
+
+            <td><?php echo $totalDay["prix_ttc"]  ?></td>
+            <td><?php echo $totalMounth["prix_ttc"] ?></td>
+            <td><?php echo $totalYear["prix_ttc"]  ?></td>
+        </tr>
+</div>
+
+<div>
+
+    <h2 align="center">recette par vendeur</h2>
+    <table class="table-info table table-dark table-striped">
+        <h2 align="center">Tableau des Recettes par vendeur </h2>
+        <tr>
+            <th>Nom du Vendeur</th>
+            <th>Recette Annuelle</th>
+
+
+        </tr>
+
+        <?php foreach ($totalbysaler as $select) : ?>
+            <tr>
+                <td><?php echo $select["id_personnel"]  ?></td>
+                <td><?php echo $select["prix_ttc"] ?></td>
+
+            </tr>
+
+
+</div> <?php endforeach ?>

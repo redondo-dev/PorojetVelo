@@ -8,11 +8,13 @@
             <a class="nav-item nav-link " href="formulaire/ajoutClient"> Formulaire de Clients</a>
             <a class="nav-item nav-link" href="clients/afficherClient">Afficher les clients</a>
             <a class="nav-item nav-link " href="facture/facture">Facture</a>
+
         </div>
     </div>
 </nav>
 
 <h1 align="center">Facture </h1>
+
 
 <div class="table-responsive" id="orderTable">
     <table class="table-info table table-striped-columns ">
@@ -58,7 +60,7 @@
 
     </table>
 
-    <h3>panier</h3>
+    <h3 align="center">Panier</h3>
     <a class="btn btn-danger" href='/velo/facture/panierDestroy'>Reset</a>
     <div>
         <h3 align=center>TABLEAU DES VENTES </h3>
@@ -117,24 +119,6 @@
 
             </form>
 
-    </div>
-    <div>
+            <button type="submit" class="btn btn-primary" name="submit"><a href="/velo/recette/recettepage"> tableau des Recettes </a></button>
 
-        <table class="table-info table ">
-            <h2 align="center">Tableau des Recettes </h2>
-            <tr>
-                <th>Recette journaliere</th>
-                <th>&nbsp;</th>
-                <th>recette mensuelle</th>
-                <th>recette annuelle</th>
-            </tr>
-            <tr>
-                <td><?php echo ($totalprixTTC) * floatval($_SESSION['panier']);  ?></td>
-                <td><?php $totaljour = ($totalprixTTC) * floatval($_SESSION['panier']);  ?></td>
-                
-                <td><?php echo $totalMensuel = $totaljour * 30;  ?></td>
-                <td><?php echo $totalAnnuel = $totalMensuel * 365;  ?></td>
-            </tr>
     </div>
-
-</div>

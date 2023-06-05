@@ -26,11 +26,4 @@ class FactureModel
 
         $select->execute([$quantite, $product, $facture]);
     }
-
-    //     public function count()
-    //     {
-    //         $select = $this->bdd->prepare("SELECT FROM ) VALUES (?, ?, ?, ? ) ");
-    //         $select->execute();
-    //         return  $select->fetchAll();
-    //     }
 }
